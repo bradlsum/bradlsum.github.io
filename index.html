@@ -1,151 +1,42 @@
 <!DOCTYPE = HTML>
 <html>
     <head>
-        <title>EasyCalc</title>
+        <title>HelloWorldS</title>
     </head>
     <body>
-        <div id="headBar">
-            EasyCalc
-        </div>
-        <div id="field">
-            <textarea id = "text" onchange="textListen()"></textarea><br>
-            <button id = "ce" onclick="clearText()">CE</button><button id = 'C' onclick="backSpace()">C</button><button id = '(' onclick="inputParen('(')">(</button><button id = ')' onclick="inputParen(')')">)</button><br>
-            <button id = 7 onclick="inputNum(7)">7</button><button id = 8 onclick="inputNum(8)">8</button><button id = 9 onclick="inputNum(9)">9</button><button id = '/' onclick="inputOp('/')">/</button><br>
-            <button id = 4 onclick="inputNum(4)">4</button><button id = 5 onclick="inputNum(5)">5</button><button id = 6 onclick="inputNum(6)">6</button><button id = '*' onclick="inputOp('*')">*</button><br>
-            <button id = 1 onclick="inputNum(1)">1</button><button id = 2 onclick="inputNum(2)">2</button><button id = 3 onclick="inputNum(3)">3</button><button id = '-' onclick="inputOp('-')">-</button><br>
-            <button id = '.' onclick="inputNum('.')">.</button><button id = 0 onclick="inputOp(0)">0</button><button id = enter onclick="evalText()">=</button><button id = '+' onclick="inputOp('+')">+</button><br>
+        <div id="main">
+            <h1>Hello world, welcome to my website!</h1>
+            <p>This is a test website that I am useing to get my feet wet in web design. Please enjoy your stay!</p>
+            <h2>Projects</h2>
+            <a href="calc.html">Simple calculator</a>
         </div>
         <script>
-            
-            // Equation that is being added to by user and solved
-            var eq = "";
-            // All possible operators
-            var operators = ['+', '-', '*', '/'];
-            // All valid numbers
-            var numbers = [1,2,3,4,5,6,7,8,9,0];
-            
-            // Gathers and check user input
-            function inputNum(x){
-                if (numbers.includes(x) == true){
-                    updateText(x);   
-                }
-                // Decimal lace handling
-                else if (x == '.'){
-                    if (eq[eq.length-1] == '.'){
-                        x = '';
-                    }
-                    else {
-                        updateText(x);
-                    }
-                }
-            }
-            
-            function inputOp(x){
-                    // Checks if last input was an operator
-                    if (operators.includes(eq[eq.length-1]) == true) {
-                        // If both are operators do nothing
-                        x = '';
-                    }
-                    // If equation is empty
-                    else if (eq == '') {
-                        // If the input is - add it to text
-                        if (x == '-') {
-                            updateText(x);
-                        }
-                        // Else do nothing
-                        else {
-                            x = '';
-                        }
-                    }
-                    // If there is only one operator add it to text field
-                    else updateText(x);
-            }
-            
-            // Paren handling
-            function inputParen(x){
-                updateText(x);
-            }
-            
-            // Adds input from the user to text field
-            function updateText(x){
-                eq = eq + x;
-                document.getElementById("text").value = eq;
-            }
-            
-            // Evaluates input text and displays result
-            function evalText(){
-                eq = eval(eq);
-                document.getElementById("text").value = eq;
-            }
-            
-            function clearText(){
-                eq = new String();
-                document.getElementById("text").value = eq;
-            }
-            
-            function backSpace(){
-                eq = eq.substring(0, eq.length - 1);
-                document.getElementById("text").value = eq;
-            }
-            
-            function textListen(){
-                eq = document.getElementById("text").value;
-            }
-            
+
         </script>
         <style media="screen", type="text/css">
-            #headBar {
-                width: 100%;
-                height: 50px;
-                
-                font-size: 30;
-                text-align: center;
-                background-color: white;
-                
-                border-bottom-style: groove;
-            }
             body {
                 text-align: center;
                 background-color: whitesmoke;
                 
-                height: 100%;
-                width: 100%;
-                
-                margin: 0px;
+                margin: 0%;
+                padding: 0%;
             }
-            #field {
-                width: 80%;
-                height: 100%;
-                
+            #main {
+                text-align: center;
                 background-color: white;
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-bottom: 0%;
+                margin-top: 0%;
                 
-                padding-top: 5px;
+                padding: 0%;
+                padding-left: 2%;
+                padding-right: 2%;
                 
-                margin-left: 10%;
-                margin-right: 10%;
+                height: 100%;
             }
-            textarea {
-                height: 50px;
-                width: 216px;
-                
-                border-radius: 10px;
-                border-color: lightgray;
-                
-                resize: none;
-            }
-            button {
-                width: 50px;
-                height: 50px;
-                
-                margin: 2px;
-                
-                background-color: lightgray;
-                
-                border: 0px;
-                border-radius: 10px;
-            }
-            #enter {
-                background-color: steelblue;
+            p {
+                text-align: left;
             }
         </style>
     </body>
