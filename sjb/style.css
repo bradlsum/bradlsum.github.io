@@ -27,8 +27,11 @@
         display: block;
         color: black;
         text-align: center;
-        padding: 14px 16px;
+        padding: 20px 16px;
         text-decoration: none;
+        
+        font-size: 20;
+        font-weight: bold;
     }
     li a:hover {
         background-color: whitesmoke;
@@ -55,11 +58,33 @@ body {
         padding-bottom: 0%;
 
         height: 100%;
+        
+        border-style: solid;
+        border-width: thin;
+        border-color: darkgray;
+        border-top-style: hidden;
+        border-bottom-style: hidden;
     }
     h1, h2 {
-        padding: 
+        padding: 0;
+        margin: 0;
+    }
+    h2 {
+        color: darkgray;
+        font-weight: lighter;
     }
     p {
         text-align: left;
         text-indent :5em;
+        font-size: 20;
+        line-height: 1.5;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin: 8px;
+        border-style: solid;
+        border-width: thin;
+        border-color: darkgray;
     }
