@@ -40,6 +40,8 @@ body {
     text-align: center;
     background-color: whitesmoke;
 
+    height: auto;
+    
     margin: 0%;
     padding: 0%;
 }
@@ -56,12 +58,12 @@ body {
     padding-top: 1px;
     padding-bottom: 0%;
 
-    height: 100%;
+    height: auto;
 
     border-style: solid;
     border-width: thin;
     border-color: darkgray;
-    border-top-style: hidden;
+    border-style: hidden;
     border-bottom-style: hidden;
 }
 h1, h2 {
@@ -81,8 +83,8 @@ h2 {
 p {
     text-align: left;
     text-indent :3em;
-    font-size: 18;
-    line-height: 1.25;
+    font-size: 20;
+    line-height: 1.5;
 }
 img {
     width: 200px;
