@@ -9,7 +9,7 @@
     border-width: thin;
     border-bottom-style: solid;
     
-    box-shadow: 4px 4px 4px lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);;
 }
 ul {
     list-style-type: none;
@@ -68,7 +68,7 @@ body {
     border-style: hidden;
     border-bottom-style: hidden;
     
-    box-shadow: 4px 4px 4px lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h1, h2 {
     padding-bottom: 0;
@@ -109,4 +109,9 @@ img {
 a {
     text-decoration: none;
     color: black;
+}
+.post:hover {
+    background-color: whitesmoke;
+    
+    border-radius: 5px;
 }
