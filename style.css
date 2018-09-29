@@ -112,7 +112,7 @@ img {
     margin: 10px;
     margin-left: 0;
     
-    border-style: solid;
+    border-style: none;
     border-width: thin;
     border-color: darkgray;
 }
