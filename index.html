@@ -1,45 +1,103 @@
-<!DOCTYPE = HTML>
+<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial scale=1">
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>SumnerJBradley</title>
-    </head>
-    <body>
-        <div id="bar">
-            <ul>
-                <li><a href="./">SJB</a></li>
-                <li><a href="projects/">Projects</a></li>
-            </ul>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>SumnerJBradley</title>
+    <link rel="icon" href="images/sjb.jpeg">
+</head>
+
+<body>
+    <div id="bar">
+        <ul class="bar">
+            <li class="bar"><a href="./">Home</a></li>
+            <li class="bar"><a href="projects/">Projects</a></li>
+        </ul>
+    </div>
+    <div id="page-wrap">
+        <img src="images/me.jpg" id="pic"
+            style="border: 1px solid #999; max-height: 200px; padding: 8px; margin: 0px 0 0 15%; float: right; background-color: white;" />
+        <h1>Sumner Bradley</h1>
+        <div id="contact-info" class="vcard">
+            <p>
+                <a class="email" href="mailto:sumnerjbradley@gmail.com">sumnerjbradley@gmail.com</a> -
+                <span class="tel">720-878-6651</span> -
+                <a href="https://github.com/bradlsum">github.com/bradlsum</a>
+            </p>
         </div>
-        <div id="main">
-            <h1>Welcome to my website!</h1>
-            <img src="images/me.jpg", style="width: 150px; height: 150px; border-style: solid;">
-            <p>My name is Sumner Bradley and this is my website! I am a quality and task driven person who enjoys a challenge. I look forward to learning new things and overcoming obstacles. I use this website to share my projects and learn about web design. There are links to some of my projects on this site and more on my GitHub which is linked below.</p>
-            <h1>Academics</h1>
-            <p>I am a graduate with a computer science degree from the University of Colorado Denver. I have studied many programming languages and am looking forward to learning many more. I am currently the most comfortable with C/C++, Java, Python, and JavaScript. I am always looking for new challenges and things to learn to increase my skill set.</p>
-            <h1>Profession</h1>
-            <p>I have over four years of customer service experience as well as almost two years working as a supervisor. I love to work with people in a team environment to accomplish goals. I am moving into my field of study for my professional life and am eager to apply my teamwork and leadership skills that I have learned working with and supervising other people.</p>
-            <div id="links" style="height: 50px;">
-                <a href="mailto:sumnerjbradley@gmail.com"><img src="images/logo_gmail_128px.png", style="width: 50px; height: 50px"></a>
-                <a href="https://github.com/bradlsum"><img src="images/GitHub-Mark-120px-plus.png", style="width: 50px; height: 50px"></a>
-            </div>
-            <br>
-        </div>
-        <script>
-        </script>
-        <style>
-            #links {
-                align-content: center;
-                align-items: center;
-                align-self: center;
-                text-align: center;
-                
-                width: 100%;
-            }
-        </style>
-    </body>
-    <footer>
+        <p>
+            Quality focused Software Engineer continually looking to challenge, utilize, and grow
+            skills in a professional setting while contributing to and improving projects.
+            Driven to provide excellent service to clients and produce excellent products.
+        </p>
+
+        <dd class="clear"></dd>
+
+        <dl>
+            <dt>Experience</dt>
+            <dd>
+                <h2>SciTec Inc <span>Assistant Scientist - Boulder, CO - 2019-present</span></h2>
+                <p>Developed and modernized legacy C/C++ applications to improve performance, reduce security
+                    vulnerabilities, and increase durability.<br>
+                    Implemented Python code for processing Google Protobuff objects.<br>
+                    Designed and executed multiple DevSecOps pipelines which built deliverable binaries and Docker
+                    images, tested source code for correctness, and detected security vulnerabilities.<br>
+                    Worked in Agile software teams and participated in Agile development practices.</p>
+
+                <h2>PROfile Connected <span>Software Developer - Denver, CO - 2018-2020</span></h2>
+                <p>Designed and implemented a web application using Go-lang for server development.<br>
+                    Utilized Javascript, HTML, and CSS to design and implement a intuitive user interface for web and
+                    mobile.<br>
+                    Collaborated with and led a team of developers to plan, develope, and test the PROfile Connected
+                    web app.</p>
+
+                <h2>SumnerJBradley.com <span>Owner/Developer - Broomfield, CO - 2019-present</span></h2>
+                <p>Built and maintain SumnerJBradley.com where personal projects are created, displayed, and updated.
+                </p>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Education</dt>
+            <dd>
+                <h2>University of Colorado Denver <span>1201 Larimer St, Denver, CO 80204</span></h2>
+                <h3>Bachelors of Science | Computer Science</h3>
+                <p>
+                    Practiced in C++, Java, and Python for applications and server development.
+                    Studied and implemented machine learning techniques using Python.
+                    Designed and executed embedded systems using C/C++.
+                </p>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Skills</dt>
+            <dd>
+                <h2>Languages</h2>
+                <p>Skilled in C/C++ and Python development.<br>
+                    Experienced with JavaScript, HTML, and CSS in a web development setting.<br>
+                    Practiced in creating infrastructure for software using CMake.<br>
+                    Knowledgeable in SQL database design and implementation.</p>
+
+                <h2>Software</h2>
+                <p>Experienced building DevSecOps pipelines using Jenkins and GitLab CI.<br>
+                    Trained in creating and utilizing Docker images and containers.<br>
+                    Seasoned developing in both Linux and Windows development environments.</p>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Hobbies</dt>
+            <dd>Playing fun video games, watching compelling movies and shows, and being a the best husband and father
+                that I can be.</dd>
+
+            <dd class="clear"></dd>
+        </dl>
+    </div>
+</body>
+<footer>
     Copyright Sumner Bradley, 2018 - All Rights Reserved
-    </footer>
+</footer>
+
 </html>
