@@ -3,7 +3,7 @@
 #header { padding: 10px 10px 0 10px;}
 #objective { width: 500px; float: left; }
 #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-#page-wrap { width: 800px; margin: 40px auto 60px; }
+#page-wrap { max-width: 800px; margin: 40px auto 60px; padding: 0 5% 0;}
 #pic { float: right; margin: -30px 0 0 0; }
 a { color: black; text-decoration: none; }
 a:hover { border-bottom-style: solid; color: #999; }
