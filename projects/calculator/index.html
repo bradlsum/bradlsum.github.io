@@ -1,160 +1,164 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial scale=1">
+<meta name="viewport" content="width=device-width, initial scale=1" />
 <html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="../../style.css">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../style.css" />
     <title>SumnerJBradley</title>
-    <link rel="icon" href="../../images/sjb.jpeg">
-</head>
+    <link rel="icon" href="../../images/sjb.jpeg" />
+  </head>
 
-<body>
+  <body>
     <div id="bar">
-        <ul class="bar">
-            <li class="bar"><a href="../../">Home</a></li>
-            <li class="bar"><a href="../">Projects</a></li>
-        </ul>
+      <ul class="bar">
+        <li class="bar"><a href="../../">Home</a></li>
+        <li class="bar"><a href="../">Projects</a></li>
+      </ul>
     </div>
-    <div id="page-wrap" style="text-align: center; height: 100%s;">
-        <h1 style="border: none;">Calculator</h1>
-        <textarea id="text" onchange="textListen()"></textarea><br>
-        <button id="ce" onclick="clearText()">CE</button><button id='C' onclick="backSpace()">C</button><button id='('
-            onclick="inputParen('(')">(</button><button id=')' onclick="inputParen(')')">)</button><br>
-        <button id=7 onclick="inputNum(7)">7</button><button id=8 onclick="inputNum(8)">8</button><button id=9
-            onclick="inputNum(9)">9</button><button id='/' onclick="inputOp('/')">/</button><br>
-        <button id=4 onclick="inputNum(4)">4</button><button id=5 onclick="inputNum(5)">5</button><button id=6
-            onclick="inputNum(6)">6</button><button id='*' onclick="inputOp('*')">*</button><br>
-        <button id=1 onclick="inputNum(1)">1</button><button id=2 onclick="inputNum(2)">2</button><button id=3
-            onclick="inputNum(3)">3</button><button id='-' onclick="inputOp('-')">-</button><br>
-        <button id='.' onclick="inputNum('.')">.</button><button id=0 onclick="inputOp(0)">0</button><button id=enter
-            onclick="evalText()">=</button><button id='+' onclick="inputOp('+')">+</button><br>
+    <div id="page-wrap" style="text-align: center; height: 100%s">
+      <h1 style="border: none">Calculator</h1>
+      <textarea id="text" onchange="textListen()"></textarea><br />
+      <button id="ce" onclick="clearText()">CE</button
+      ><button id="C" onclick="backSpace()">C</button
+      ><button id="(" onclick="inputParen('(')">(</button
+      ><button id=")" onclick="inputParen(')')">)</button><br />
+      <button id="7" onclick="inputNum(7)">7</button
+      ><button id="8" onclick="inputNum(8)">8</button
+      ><button id="9" onclick="inputNum(9)">9</button
+      ><button id="/" onclick="inputOp('/')">/</button><br />
+      <button id="4" onclick="inputNum(4)">4</button
+      ><button id="5" onclick="inputNum(5)">5</button
+      ><button id="6" onclick="inputNum(6)">6</button
+      ><button id="*" onclick="inputOp('*')">*</button><br />
+      <button id="1" onclick="inputNum(1)">1</button
+      ><button id="2" onclick="inputNum(2)">2</button
+      ><button id="3" onclick="inputNum(3)">3</button
+      ><button id="-" onclick="inputOp('-')">-</button><br />
+      <button id="." onclick="inputNum('.')">.</button
+      ><button id="0" onclick="inputOp(0)">0</button
+      ><button id="enter" onclick="evalText()">=</button
+      ><button id="+" onclick="inputOp('+')">+</button><br />
     </div>
 
     <script>
-        // Equation that is being added to by user and solved
-        var eq = "";
-        // All possible operators
-        var operators = ['+', '-', '*', '/'];
-        // All valid numbers
-        var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+      // Equation that is being added to by user and solved
+      var eq = "";
+      // All possible operators
+      var operators = ["+", "-", "*", "/"];
+      // All valid numbers
+      var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-        // Gathers and check user input
-        function inputNum(x) {
-            if (numbers.includes(x) == true) {
-                updateText(x);
-            }
-            // Decimal lace handling
-            else if (x == '.') {
-                if (eq[eq.length - 1] == '.') {
-                    x = '';
-                }
-                else {
-                    updateText(x);
-                }
-            }
+      // Gathers and check user input
+      function inputNum(x) {
+        if (numbers.includes(x) == true) {
+          updateText(x);
         }
-
-        function inputOp(x) {
-            // Checks if last input was an operator
-            if (operators.includes(eq[eq.length - 1]) == true) {
-                // If both are operators do nothing
-                x = '';
-            }
-            // If equation is empty
-            else if (eq == '') {
-                // If the input is - add it to text
-                if (x == '-') {
-                    updateText(x);
-                }
-                // Else do nothing
-                else {
-                    x = '';
-                }
-            }
-            // If there is only one operator add it to text field
-            else updateText(x);
-        }
-
-        // Paren handling
-        function inputParen(x) {
+        // Decimal lace handling
+        else if (x == ".") {
+          if (eq[eq.length - 1] == ".") {
+            x = "";
+          } else {
             updateText(x);
+          }
         }
+      }
 
-        // Adds input from the user to text field
-        function updateText(x) {
-            eq = eq + x;
-            document.getElementById("text").value = eq;
+      function inputOp(x) {
+        // Checks if last input was an operator
+        if (operators.includes(eq[eq.length - 1]) == true) {
+          // If both are operators do nothing
+          x = "";
         }
-
-        // Evaluates input text and displays result
-        function evalText() {
-            eq = eval(eq);
-            document.getElementById("text").value = eq;
+        // If equation is empty
+        else if (eq == "") {
+          // If the input is - add it to text
+          if (x == "-") {
+            updateText(x);
+          }
+          // Else do nothing
+          else {
+            x = "";
+          }
         }
+        // If there is only one operator add it to text field
+        else updateText(x);
+      }
 
-        function clearText() {
-            eq = new String();
-            document.getElementById("text").value = eq;
-        }
+      // Paren handling
+      function inputParen(x) {
+        updateText(x);
+      }
 
-        function backSpace() {
-            eq = eq.substring(0, eq.length - 1);
-            document.getElementById("text").value = eq;
-        }
+      // Adds input from the user to text field
+      function updateText(x) {
+        eq = eq + x;
+        document.getElementById("text").value = eq;
+      }
 
-        function textListen() {
-            eq = document.getElementById("text").value;
-        }
+      // Evaluates input text and displays result
+      function evalText() {
+        eq = eval(eq);
+        document.getElementById("text").value = eq;
+      }
 
+      function clearText() {
+        eq = new String();
+        document.getElementById("text").value = eq;
+      }
+
+      function backSpace() {
+        eq = eq.substring(0, eq.length - 1);
+        document.getElementById("text").value = eq;
+      }
+
+      function textListen() {
+        eq = document.getElementById("text").value;
+      }
     </script>
     <style media="screen" , type="text/css">
-        #main {
-            padding-top: 2%;
-        }
+      #main {
+        padding-top: 2%;
+      }
 
-        textarea {
-            height: 50px;
-            width: 216px;
+      textarea {
+        height: 50px;
+        width: 216px;
 
-            padding-top: 2%;
+        padding-top: 2%;
 
-            text-align: center;
+        text-align: center;
 
-            border-radius: 10px;
-            border-color: lightgray;
+        border-radius: 10px;
+        border-color: lightgray;
 
-            resize: none;
+        resize: none;
 
-            font-size: 30;
-        }
+        font-size: 30;
+      }
 
-        button {
-            width: 50px;
-            height: 50px;
+      button {
+        width: 50px;
+        height: 50px;
 
-            margin: 2px;
+        margin: 2px;
 
-            background-color: lightgray;
+        background-color: lightgray;
 
-            border: 0px;
-            border-radius: 10px;
-        }
+        border: 0px;
+        border-radius: 10px;
+      }
 
-        #enter {
-            background-color: steelblue;
-        }
+      #enter {
+        background-color: steelblue;
+      }
 
-        h1 {
-            padding: 0px;
-            padding-bottom: 2%;
-            margin: 0px;
+      h1 {
+        padding: 0px;
+        padding-bottom: 2%;
+        margin: 0px;
 
-            color: steelblue;
-        }
+        color: steelblue;
+      }
     </style>
-</body>
-<footer>
-    Copyright Sumner Bradley, 2018 - All Rights Reserved
-</footer>
-
+  </body>
+  <footer>Copyright Sumner Bradley, 2018 - All Rights Reserved</footer>
 </html>
